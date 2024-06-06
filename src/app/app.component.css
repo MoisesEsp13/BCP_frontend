@@ -1,7 +1,7 @@
 .formularioRegistro{
   padding-left: 30%;
   padding-right: 30%;
-  margin-top: 3%;
+  margin-top: 1.5%;
 }
 
 table {
@@ -11,4 +11,13 @@ table {
 .example-button-row {
   display: table-cell;
   width: 490px;
+}
+
+.titulo1 {
+  margin-top: 20px;
+  padding: 25px;
+  background-color: #004A8E;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
 }
