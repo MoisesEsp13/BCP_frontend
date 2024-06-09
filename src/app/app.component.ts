@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
   areas: any;
   prioridades: any;
   estados: any;
+  pedidos: any[] = [];
 
   constructor(
     private fb: FormBuilder,
@@ -71,11 +72,19 @@ export class AppComponent implements OnInit {
       error => {
         console.error(error)
       }
+    );
+
+    this.pedidosService.getTop3Pedidos().subscribe(data => {
+        this.pedidos = data;
+      }
     )
   }
 
   guardar(): void {
-    console.log(this.pedidoForm.value);
+    this.pedidosService.savePedido(this.pedidoForm.value).subscribe(resp=>{
+    },
+    error=>{console.error(error)}
+    )
   }
 }
 
